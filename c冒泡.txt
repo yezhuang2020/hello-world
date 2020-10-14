@@ -1,0 +1,42 @@
+/*
+ ============================================================================
+ Name        : mytest2.c
+ Author      : asdfasdf
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 5
+void bubble_sort(int a[],int n) {
+	int i,j;
+	int temp;
+	for (i=0;i<n;i++)
+	{
+		for(j=0;j<n-i-1;j++)
+		{
+			if(a[j]>a[j+1])
+			{
+				temp=a[j];
+				a[j]=a[j+1];
+				a[j+1]=temp;
+			}
+		}
+	}
+}
+int main(void)
+{
+	int i;
+	int num[N];
+	setbuf(stdout,NULL);
+	printf("«Î ‰»Î5∏ˆ ˝");
+	for(i=0;i<N;i++)
+		scanf("%d",&num[i]);
+	bubble_sort(num,N);
+	for(i=0;i<N;i++)
+		printf("%4d",num[i]);
+	return EXIT_SUCCESS;
+}
